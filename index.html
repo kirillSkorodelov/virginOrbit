@@ -55,29 +55,22 @@
             //getElementById('lottie')
 
         document.querySelector("#newtonthree").addEventListener('mouseover', function() {
-            if (anim.currentFrame < 12) {
+            if (anim.firstFrame + anim.currentFrame < 100) {
 
-                //anim.goToAndStop(100, true)
                 anim.playSegments([100, 113], true);
-                // anim.goToAndStop(100, true);
-                // anim.playSegments([100, 113], true)
-                // setTimeout(function() {
-                //     anim.goToAndStop(13, true);
-                // }, 600);
 
-                //anim.goToAndStop(113, true);
             }
         })
 
         document.querySelector("#newtonfour").addEventListener('mouseover', function() {
-            if (anim.currentFrame == 12) {
+            if (anim.firstFrame + anim.currentFrame < 150 && anim.firstFrame + anim.currentFrame > 100) {
 
                 anim.playSegments([150, 164], true);
             }
         })
 
         document.querySelector("#payload").addEventListener('mouseover', function() {
-            if (anim.currentFrame == 13) {
+            if (anim.firstFrame + anim.currentFrame < 175 && anim.firstFrame + anim.currentFrame > 150) {
 
                 anim.playSegments([175, 190], true);
             }
